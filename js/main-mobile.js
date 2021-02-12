@@ -4005,7 +4005,7 @@ parameterData[19] = {
   transform: 'parseFloat(#paraValue#)/100', 
   requiresReset: true, 
   runFAtEnd: '',
-  help: 'Texto de Ayuda contextual',
+  help: 'Cantidad de infectados inicialmente. xxxxxxxxxxxxxxxxxxxxx',
 };
 
 parameterData[20] = {
@@ -4648,7 +4648,7 @@ function setUpPlotGraph() {
   vaccinatedLinePath.style.fill = 'hsla(' + stateColors['vaccinated'] + ',1)';
 			
   options = {};
-  options.text = "1%\t vacunados";
+  options.text = "1%\t Vac";
   options.fontSize = fontForLineLabel;
   options.textcolor = "hsl(90, 100%, 50%)";
   addText("plotG", "vaccinatedText", options);
@@ -4665,7 +4665,7 @@ function setUpPlotGraph() {
 
   options.x = ejex;
   options.y = ejey-10;
-  options.text = "1%\t Recuperados";
+  options.text = "1%\t Rec";
   options.fontSize = fontForLineLabel;
   options.textcolor = "hsl(195, 100%, 50%)";
   addText("plotG", "removedText", options);
@@ -4682,7 +4682,7 @@ function setUpPlotGraph() {
   options = {};
   options.x = ejex
   options.y = ejey-20;
-  options.text = "1%\t Susceptibles";
+  options.text = "1%\t Sus.";
   options.fontSize = fontForLineLabel;
   options.textcolor = "hsla(" + stateColors["susceptible"] + ",1)";
   addText("plotG", "susceptibleText", options);
@@ -4699,7 +4699,7 @@ function setUpPlotGraph() {
   options = {};
   options.x = ejex;
   options.y = ejey-20;
-  options.text = "1% Contagiados";
+  options.text = "1% Con";
   options.fontSize = fontForLineLabel;
   options.textcolor = "hsla(" + stateColors["infected"] + ",1)";
   addText("plotG", "infectedText", options);
