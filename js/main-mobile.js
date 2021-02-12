@@ -3942,23 +3942,25 @@ parameterData[4] = {
   max: 1,
   min: 0,
   step: 0.01,
-  color: "25, 130, 220",
+  color: '10, 100%, 63%', 
   transform: "parseFloat(#paraValue#)",
   requiresReset: false,
   runFAtEnd:
     "boundaryForceC = linearValue(0, 1, 0.1, 2,simulationParameters.socialDistancingFactorA)",
+  help: 'Texto de Ayuda contextual',
 };
 parameterData[5] = {
   name: "socialDistanceObedientPop",
-  div: "@@@% Acatemiento social",
+  div: "@@@% Acatamiento social",
   initValue: 100,
   max: 100,
   min: 0,
   step: 0.1,
-  color: "25, 130, 220",
+  color: '10, 100%, 63%', 
   transform: "parseFloat(#paraValue#)/100",
   requiresReset: false,
   runFAtEnd: "handleSDObedience()",
+  help: 'Texto de Ayuda contextual',
 };
 
 divAdjust =
@@ -4003,6 +4005,7 @@ parameterData[19] = {
   transform: 'parseFloat(#paraValue#)/100', 
   requiresReset: true, 
   runFAtEnd: '',
+  help: 'Texto de Ayuda contextual',
 };
 
 parameterData[20] = {
@@ -4017,6 +4020,7 @@ parameterData[20] = {
   transform: 'parseInt(#paraValue#)', 
   requiresReset: true, 
   runFAtEnd: '',
+  help: 'Texto de Ayuda contextual',
 };
 
 
@@ -4074,8 +4078,10 @@ function addVariousParameters() {
       pName = parameterData[parameterIndex].name + "div";
       parameterSliderRMap[pName + "Slider"] = parameterIndex;
       parameterDivData =
-        '<div class="col-12 justify-content-center text-center" id="parameter' +
-        pName +
+        '<div class="col-12 justify-content-center text-center"' + 
+        'data-toggle="tooltip" data-placement="top" title= "' + 
+        parameterData[parameterIndex].help + 
+        '" id="parameter"' + pName +
         'Text">' +
         parameterData[parameterIndex].div.replace(
           /@@@/g,

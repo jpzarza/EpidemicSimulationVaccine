@@ -32,7 +32,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-
+	
 	<link rel="icon" href="../square.png">
 
 	<style>
@@ -219,7 +219,7 @@
 
 		/* The Close Button */
 		.close {
-		color: #aaa;
+		color: #FC9630;
 		float: right;
 		font-size: 28px;
 		font-weight: bold;
@@ -227,7 +227,7 @@
 
 		.close:hover,
 		.close:focus {
-		color: black;
+		color: #FC9630;
 		text-decoration: none;
 		cursor: pointer;
 		}
@@ -377,15 +377,6 @@
 			<div class="pos-f-t">
 				
 				<nav class="navbar">
-				  <div>
-					  <!--
-					<button class="navbar-toggler" type="button" data-toggle="collapse" 
-						data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" 
-						aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>	
-					-->
-					
-					</div>
 					<div >
 						<h6 id="universidades" class="w-100 text-white">UNTDF & UTN
 						</h6>
@@ -396,7 +387,7 @@
 				</nav>
 			</div>
 
-	</div>
+		</div>
 
 	</div>
 
@@ -404,12 +395,7 @@
 	
 
 
-	<div class="row text-light" style="background-color: #FC9630; ;" id="caseTypeNameH">
-		<!--
-		<span id="caseTypeName">Caso Simple: <p><small>una ciudad o pueblo, sin contacto con otras
-				poblaciones.</small></p></span>
-		-->
-	</div>
+	
 	<div class="row " id="containAll">
 		<div class="row" >
 			<div id="MainBlock1" >
@@ -571,7 +557,10 @@
 					</div>-->
 					<div class="text-center">
 						<div>
-							<label>NO <- Vacunar -> SI</label>
+							<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+								Tooltip with HTML
+							  </button>
+							<label data-toggle="tooltip" data-placement="right" title="Tooltip on right">NO <- Vacunar -> SI</label>
 
 						<div id="VaccButtonH" class="col text-center align-self-center w-100">
 							
@@ -589,7 +578,9 @@
 			</div>
 
 		</div>		
-				
+		
+		
+
 		<script>
 			document.addEventListener("DOMContentLoaded", function(event) {
 				//código a ejecutar cuando el DOM está listo para recibir acciones
@@ -598,6 +589,9 @@
 				span.onclick = function() {
 					splash.style.display = "none";
 				}
+			});
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip()
 			});
 		</script>
 		<script>
@@ -655,6 +649,7 @@
 				}
 		</script>
 		<script src="../js/main-mobile.js"></script>
+		<script src="https://unpkg.com/@popperjs/core@2"></script>
 </body>
 
 <html>
