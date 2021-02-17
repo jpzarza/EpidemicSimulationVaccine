@@ -466,19 +466,7 @@
 					
 					<!--Eduardo: convierto el boton de cuarentena en boton de vacunacion-->	
 					<div class="text-center">
-						<div>
-							<label>Medidas Sanitarias</label>
-						</div>
-						<div id="quarantineH" class="col text-center align-self-center w-100">
-							
-							<label class="switch">
-								<input type="checkbox"  onchange="handleQClick(event)" id="quarantinecheck"
-								name="quarantinecheck" value="quarantinecheck">
-								<span class="slider"></span>
-							  </label>
-							
-						</div>
-					</div>
+					<div>
 							
 						<!--
 						<div id="VaccButtonH" class="col text-center align-self-center w-100">
@@ -490,7 +478,23 @@
 							  </label>
 						</div>-->
 
+						<div id="caseTypeChooseH" class="d-flex justify-content-around align-self-stretch">
 						
+							<div id="simpleCaseoptionH" class="col"  >
+								<input type ="button" class="button" onclick="handleConfigChange(event)" 
+								id='simpleCaseoption' value='simple' list="brow" readonly> </input>
+							</div>
+							<div id="centralLocationoptionH" class="col" >
+								<input type ="button" class="button" onclick="handleConfigChange(event)" 
+								id='centralLocationoption' value='aglomeración' list="brow" readonly> </input>
+								
+							</div>
+							
+							<div id="communitiesoptionH" class="col" >
+								<input type ="button" class="button" onclick="handleConfigChange(event)" 
+								id='communitiesoption'  value='comunidades' list="brow" readonly> </input>
+							</div>
+						</div>
 
 						<label style="color: #383838;">-------------------------------------</label>	
 					
