@@ -6338,14 +6338,14 @@ function updatePlotGraph() {
   );
 
   options = {}
-  options.text = vaccinatedV.toFixed(1) + '% Vacunados'
+  options.text = vaccinatedV.toFixed(1) + '% Vac'
   //options.y = (100 + vaccinatedV + infectedV + susceptibleV)/2
   //yremovedTextLoc = (100 + vaccinatedV + infectedV + susceptibleV)/2
   //if (dayCount >= 10) { options.x = dayCount*1.03 }
   updateText('plotG', 'vaccinatedText', options)	
 			
   options = {};
-  options.text = removedV.toFixed(1) + "% Recuperados";
+  options.text = removedV.toFixed(1) + "% Rec";
   //options.y = (100 + infectedV + susceptibleV) / 2;
   //yremovedTextLoc = (100 + infectedV + susceptibleV) / 2;
   if (dayCount >= 10) {
@@ -6354,7 +6354,7 @@ function updatePlotGraph() {
   updateText("plotG", "removedText", options);
 
   options = {};
-  options.text = susceptibleV.toFixed(1) + "% Susceptibles";
+  options.text = susceptibleV.toFixed(1) + "% Susc";
   
   //Se cambia la proporcion de movilidad de los valores que informan % en eje y
   //options.y = (susceptibleV + infectedV + infectedV) / 2;
@@ -6369,7 +6369,7 @@ function updatePlotGraph() {
   updateText("plotG", "susceptibleText", options);
 
   options = {};
-  options.text = infectedV.toFixed(1) + "% Contagiados";
+  options.text = infectedV.toFixed(1) + "% Cont";
   // options.y = infectedV / 2;
   // if (ysusceptibleTextLoc - infectedV / 2 < 15) {
   //   options.y = ysusceptibleTextLoc - 15;
